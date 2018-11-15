@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:weightSum="3">
+
+        <Button
+            android:id="@+id/btNumber"
+            android:layout_width="120dp"
+            android:layout_height="55dp"
+            android:textSize="@dimen/sp_26"
+            android:textColor="@color/black"
+            android:background="@drawable/payview_btn_selector"/>
+
+    </LinearLayout>
+</LinearLayout>
