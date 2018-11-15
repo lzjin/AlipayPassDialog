@@ -4,11 +4,10 @@
 <h3><br>3、字体内容、大小、颜色都可以根据需求更改</h3>
 <h2>使用步骤</h2>
 <h3>1、 引入: implementation 'com.github.lzjin:AlipayPassDialog:1.1' </h3>
-<h4>2、默认方式，代码如下:</h4>
-<p>
- <img src="https://raw.githubusercontent.com/lzjin/AlipayPassDialog/master/imgfolder/ic_code1.png" width="300" height="450" style="max-width:100%;">
-![方式一](https://raw.githubusercontent.com/lzjin/AlipayPassDialog/master/imgfolder/ic_code1.png)
-<h4>自定义，代码如下</h4>
-<p>![方式二](https://raw.githubusercontent.com/lzjin/AlipayPassDialog/master/imgfolder/ic_code2.png)
+<h4>2、代码使用如下:</h4>
+<p>方式一：默认系统配置
+<img src="https://raw.githubusercontent.com/lzjin/AlipayPassDialog/master/imgfolder/ic_code1.png">
+<p>方式二：自定义配置:
+<img src="https://raw.githubusercontent.com/lzjin/AlipayPassDialog/master/imgfolder/ic_code2.png">
 <h2>效果图:</h2>
-<p>![效果图](https://raw.githubusercontent.com/lzjin/AlipayPassDialog/master/imgfolder/ic_preview.png)
+<p><img src="https://raw.githubusercontent.com/lzjin/AlipayPassDialog/master/imgfolder/ic_preview.png">
