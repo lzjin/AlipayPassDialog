@@ -5,7 +5,9 @@
 <h2>使用步骤</h2>
 <h3>1、 引入: implementation 'com.github.lzjin:AlipayPassDialog:1.1' </h3>
 <h4>2、默认方式，代码如下:</h4>
-<p>![方式一](https://raw.githubusercontent.com/lzjin/AlipayPassDialog/master/imgfolder/ic_code1.png)
+<p>
+ <img src="https://raw.githubusercontent.com/lzjin/AlipayPassDialog/master/imgfolder/ic_code1.png" width="300" height="450" style="max-width:100%;">
+![方式一](https://raw.githubusercontent.com/lzjin/AlipayPassDialog/master/imgfolder/ic_code1.png)
 <h4>自定义，代码如下</h4>
 <p>![方式二](https://raw.githubusercontent.com/lzjin/AlipayPassDialog/master/imgfolder/ic_code2.png)
 <h2>效果图:</h2>
