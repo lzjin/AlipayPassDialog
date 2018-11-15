@@ -3,8 +3,11 @@
 <h3><br>2、自定义方式，自己根据需求进行配置</h3>
 <h3><br>3、字体内容、大小、颜色都可以根据需求更改</h3>
 ## 使用步骤
-<h4>1、默认方式，代码如下:</h4>
-
-<h4>1、默认方式代码如下</h4>
-### 三级标题
-Android仿支付宝密码键盘弹框，可以自定义样式Dialog，调节字体颜色大小内容
+<h4>1、 引入: implementation 'com.github.lzjin:AlipayPassDialog:1.1' </h4>
+<h4>2、默认方式，代码如下:</h4>
+![方式一](https://raw.githubusercontent.com/lzjin/AlipayPassDialog/master/imgfolder/ic_code1.png)
+<h4>自定义，代码如下</h4>
+![方式二](https://raw.githubusercontent.com/lzjin/AlipayPassDialog/master/imgfolder/ic_code2.png)
+### 效果图:
+弹出效果
+![方式二](https://raw.githubusercontent.com/lzjin/AlipayPassDialog/master/imgfolder/ic_preview.png)
