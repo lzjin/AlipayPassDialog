@@ -4,6 +4,7 @@ import android.app.AlertDialog;
 import android.content.Context;
 import android.view.Gravity;
 import android.view.LayoutInflater;
+import android.view.View;
 import android.view.Window;
 import android.widget.LinearLayout;
 
@@ -23,7 +24,7 @@ public class PayPassDialog {
     private Window window;//窗口
     private Context mContext;//上下文
     private int mThemeResId;//主题
-    private PayPassView mDialogLayout;//布局
+    private View mDialogLayout;//布局
 
 
     /**
@@ -34,7 +35,7 @@ public class PayPassDialog {
 
         this.mContext = context;
         this.mThemeResId= R.style.dialog_pay_theme;
-        this.mDialogLayout = (PayPassView) LayoutInflater.from(mContext).inflate(R.layout.view_paypass_dialog,null);
+        this.mDialogLayout =  LayoutInflater.from(mContext).inflate(R.layout.view_paypass_dialog,null);
         mDialog=new AlertDialog.Builder(mContext,mThemeResId).create();
         mDialog.setCancelable(true);
         mDialog.show();
@@ -66,7 +67,7 @@ public class PayPassDialog {
     public PayPassDialog(Context context, int themeResId) {
         this.mContext = context;
         this.mThemeResId=themeResId;
-        this.mDialogLayout = (PayPassView) LayoutInflater.from(mContext).inflate(R.layout.view_paypass_dialog,null);
+        this.mDialogLayout =   LayoutInflater.from(mContext).inflate(R.layout.view_paypass_dialog,null);
     }
 
     /**
