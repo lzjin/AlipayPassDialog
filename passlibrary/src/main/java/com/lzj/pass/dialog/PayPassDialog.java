@@ -10,6 +10,12 @@ import android.widget.LinearLayout;
 /**
  * Created by Administrator on 2018/11/15.
  * 使用弹框作为容器
+ * 使用介绍：
+ *  方式一：直接new PayPassDialog(this)，将使用默认配置
+ *  方式二:new PayPassDialog(this,自定义样式);
+ *        setAlertDialog
+ *        setWindowSize
+ *        等等方式进行自主配置
  */
 
 public class PayPassDialog {
@@ -27,7 +33,7 @@ public class PayPassDialog {
     public PayPassDialog(Context context) {
 
         this.mContext = context;
-        this.mThemeResId= R.style.dialog_gray;
+        this.mThemeResId= R.style.dialog_pay_theme;
         this.mDialogLayout = (PayPassView) LayoutInflater.from(mContext).inflate(R.layout.view_paypass_dialog,null);
         mDialog=new AlertDialog.Builder(mContext,mThemeResId).create();
         mDialog.setCancelable(true);
@@ -38,7 +44,7 @@ public class PayPassDialog {
         window.setLayout(LinearLayout.LayoutParams.MATCH_PARENT, LinearLayout.LayoutParams.WRAP_CONTENT);
         window.setContentView(mDialogLayout);//设置弹框布局
         mDialog.setCanceledOnTouchOutside(false);
-        window.setWindowAnimations(R.style.teamTypeAnimation);  //添加动画
+        window.setWindowAnimations(R.style.dialogOpenAnimation);  //添加动画
         window.setGravity(Gravity.BOTTOM);//底部
 
     }
@@ -52,13 +58,12 @@ public class PayPassDialog {
 
     }
 
-
     /**
      *  自定义
      * @param context
      * @param themeResId  主题样式
      */
-    public PayPassDialog(Context context, int themeResId) {//R.style.dialog_gray
+    public PayPassDialog(Context context, int themeResId) {
         this.mContext = context;
         this.mThemeResId=themeResId;
         this.mDialogLayout = (PayPassView) LayoutInflater.from(mContext).inflate(R.layout.view_paypass_dialog,null);

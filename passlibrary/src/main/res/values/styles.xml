@@ -2,7 +2,7 @@
 <resources>
 
     <!--主题样式-->
-    <style name="dialog_gray" parent="@android:style/Theme.Dialog">
+    <style name="dialog_pay_theme" parent="@android:style/Theme.Dialog">
         <!--边框-->
         <item name="android:windowFrame">@null</item>
         <item name="android:windowNoTitle">true</item>
@@ -11,7 +11,7 @@
     </style>
 
     <!--动画方式-->
-    <style name="teamTypeAnimation" parent="android:Animation">
+    <style name="dialogOpenAnimation" parent="android:Animation">
         <item name="android:windowEnterAnimation">@anim/dialog_payview_in</item>
         <item name="android:windowExitAnimation">@anim/dialog_payview_out</item>
     </style>
