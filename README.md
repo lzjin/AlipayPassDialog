@@ -25,4 +25,4 @@
 <p>方式二：自定义配置:
 <p><img src="https://raw.githubusercontent.com/lzjin/AlipayPassDialog/master/imgfolder/ic_code2.png">
 <h2>效果图:</h2>
-<p><img src="https://raw.githubusercontent.com/lzjin/AlipayPassDialog/master/imgfolder/ic_preview.png">
+<p><img  width="300" height="500"  src="https://raw.githubusercontent.com/lzjin/AlipayPassDialog/master/imgfolder/ic_preview.png">
