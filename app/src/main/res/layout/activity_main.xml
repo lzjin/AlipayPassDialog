@@ -6,10 +6,11 @@
     android:layout_height="match_parent"
     tools:context="com.lzj.pass.MainActivity">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!"
+    <Button
+        android:id="@+id/bt_test"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:text="密码效果"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"

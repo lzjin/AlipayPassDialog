@@ -45,7 +45,7 @@ public class PayPassDialog {
         window.setLayout(LinearLayout.LayoutParams.MATCH_PARENT, LinearLayout.LayoutParams.WRAP_CONTENT);
         window.setContentView(mDialogLayout);//设置弹框布局
         mDialog.setCanceledOnTouchOutside(false);
-        window.setWindowAnimations(R.style.dialogOpenAnimation);  //添加动画
+        window.setWindowAnimations(R.style.dialogOpenAnimation);  //添加弹框动画
         window.setGravity(Gravity.BOTTOM);//底部
 
     }
