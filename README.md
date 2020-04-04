@@ -1,35 +1,56 @@
 # ViewPagerGallery
-不懂看博客、不懂看博客、不懂看博客
-<p>[博客讲解地址](https://blog.csdn.net/lin857/article/details/84111930)
-<h2>欢迎大家Star</h2>
-<h2>效果图:</h2>
-<p><img  width="300" height="500"  src="https://raw.githubusercontent.com/lzjin/AlipayPassDialog/master/imgfolder/ic_preview.png">
-<h3>特点功能:</h3>
-<h6>支持自定义文本、颜色、大小</h6>
-<h6>支持自定义关闭图标</h6>
-<h6>支持弹框样式</h6>
-<h6>支持回调函数处理</h6>
-<h3>API方法介绍:</h3>
-<h6>setCloseImgView(int resId) //设置关闭图标 </h6>
-<h6>setHintText(String text)//设置提醒标题的文本 </h6>
-<h6>setForgetText(String text) //设置忘记密码文字</h6>
-<h6>PayPassDialog(Context context, int themeResId)//自定义弹框样式,有默认样式</h6>
-<h6>setPayClickListener(OnPayClickListener listener) //设置回调</h6>
-<h6>onPassFinish(String passContent)//6位输入完成回调</h6>
-<h6>onPayClose()//关闭回调</h6>
-<h6>onPayForget()//忘记密码回调</h6>
 
-Usage
+#### 博客讲解地址,欢迎前往查看  
+[博客讲解地址](https://blog.csdn.net/lin857/article/details/84111930)  
+
+### 欢迎大家Star,老铁给鼓励呗  
+
+### 效果图如下:  
+<img  width="300" height="500"  src="https://raw.githubusercontent.com/lzjin/AlipayPassDialog/master/imgfolder/ic_preview.png">  
+
+### 主要功能  
+* 支持自定义文本、颜色、大小 
+* 支持自定义关闭图标 
+* 支持弹框样式 
+* 支持回调函数处理 
+
+### API方法介绍  
+* setCloseImgView(int resId) //设置关闭图标 
+* setHintText(String text)//设置提醒标题的文本  
+* setForgetText(String text) //设置忘记密码文字 
+* PayPassDialog(Context context, int themeResId)//自定义弹框样式,有默认样式 
+* setPayClickListener(OnPayClickListener listener) //设置回调 
+* onPassFinish(String passContent)//6位输入完成回调 
+* onPayClose()//关闭回调 
+* onPayForget()//忘记密码回调 
+
+### Usage Jitpack 
 --
-##### Gradle:
-```groovy
-implementation 'com.github.lzjin:AlipayPassDialog:2.0'   
+Step 1. Add it in your root build.gradle at the end of repositories:
 ```
+allprojects {
+    repositories {
+	 ...
+	 maven { url 'https://jitpack.io' }
+    }
+}
+```
+#### Gradle:
+Step 2. Add the dependency
+```
+dependencies {
+    //androidX版本
+    implementation 'com.github.lzjin:AlipayPassDialog:2.1' 
+
+    //Support  版本
+    implementation 'com.github.lzjin:AlipayPassDialog:2.0'
+}
+```
+
 ## 历史版本最底部
 Demo
 --
-##### Java:
-```groovy
+```
     //1 默认方式(推荐)
     private void payDialog() {
         final PayPassDialog dialog=new PayPassDialog(this);
@@ -51,10 +72,9 @@ Demo
                     }
                 });
     }
-```
+```  
 
-##### Java:
-```groovy
+```
     //2 自定义方式
     private void payDialog2() {
         final PayPassDialog dialog=new PayPassDialog(this,R.style.dialog_pay_theme);
@@ -88,12 +108,17 @@ Demo
         });
     }
 ```
-#### v1.1
-    优化更新
- * 修复部分手机兼容问题
- * demo增加功能
- #### v2.0
-     优化更新
-  * 优化界面适配问题
-  * 增加Demo演示代码
+ #### v2.1
+* AndroidX 版本
 
+ #### v2.0
+* 优化界面适配问题
+* 增加Demo演示代码
+  
+#### v1.1
+* 优化已知
+* 修复部分手机兼容问题
+* 增加功能
+ 
+#### v1.0
+* 基础使用
