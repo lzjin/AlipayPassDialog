@@ -13,6 +13,7 @@
 * 支持自定义关闭图标 
 * 支持弹框样式 
 * 支持回调函数处理 
+* 支持数字位置随机
 
 ### API方法介绍  
 * setCloseImgView(int resId) //设置关闭图标 
@@ -20,9 +21,10 @@
 * setForgetText(String text) //设置忘记密码文字 
 * PayPassDialog(Context context, int themeResId)//自定义弹框样式,有默认样式 
 * setPayClickListener(OnPayClickListener listener) //设置回调 
-* onPassFinish(String passContent)//6位输入完成回调 
+* onPassFinish(String password)//6位输入完成回调 
 * onPayClose()//关闭回调 
 * onPayForget()//忘记密码回调 
+* setRandomNumber(true) //数字随机
 
 ### Usage Jitpack 
 ---
@@ -40,7 +42,7 @@ Step 2. Add the dependency
 ```
 dependencies {
     //androidX版本
-    implementation 'com.github.lzjin:AlipayPassDialog:2.1' 
+    implementation 'com.github.lzjin:AlipayPassDialog:2.2' 
 
     //Support  版本
     implementation 'com.github.lzjin:AlipayPassDialog:2.0'
@@ -55,6 +57,7 @@ Demo
     private void payDialog() {
         final PayPassDialog dialog=new PayPassDialog(this);
           dialog.getPayViewPass()
+                .setRandomNumber(true)
                 .setPayClickListener(new PayPassView.OnPayClickListener() {
                     @Override
                     public void onPassFinish(String passContent) {
@@ -84,11 +87,11 @@ Demo
                 .setOutColse(false)
                 .setGravity(R.style.dialogOpenAnimation, Gravity.BOTTOM);
         //组合控件自定义配置
-        PayPassView payView=dialog.getPayViewPass();
-        payView.setForgetText("忘记支付密码?");
-        payView.setForgetColor(getResources().getColor(R.color.colorAccent));
-        payView.setForgetSize(16);
-        payView.setPayClickListener(new PayPassView.OnPayClickListener() {
+        dialog.getPayViewPass()
+        .setForgetText("忘记支付密码?");
+        .setForgetColor(getResources().getColor(R.color.colorAccent));
+        .setForgetSize(16);
+        .setPayClickListener(new PayPassView.OnPayClickListener() {
             @Override
             public void onPassFinish(String passContent) {
                 //6位输入完成回调
@@ -108,8 +111,13 @@ Demo
         });
     }
 ```
+
+ #### v2.2
+* 新增数字位置随机
+* 优化已知bug
+
  #### v2.1
-* AndroidX 版本
+* 2.1版本起支持AndroidX
 
  #### v2.0
 * 优化界面适配问题

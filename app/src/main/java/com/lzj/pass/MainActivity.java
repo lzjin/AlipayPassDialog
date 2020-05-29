@@ -2,6 +2,9 @@ package com.lzj.pass;
 
 import android.os.Bundle;
 import androidx.appcompat.app.AppCompatActivity;
+
+import android.os.Handler;
+import android.util.Log;
 import android.view.Gravity;
 import android.view.View;
 import android.widget.Button;
@@ -54,9 +57,9 @@ public class MainActivity extends AppCompatActivity {
                 dialog.getPayViewPass()
                 .setPayClickListener(new PayPassView.OnPayClickListener() {
                     @Override
-                    public void onPassFinish(String passContent) {
+                    public void onPassFinish(String password) {
                         //6位输入完成回调
-                        showShort("输入完成回调");
+                        showShort("输入内容:"+password);
                     }
                     @Override
                     public void onPayClose() {
@@ -67,7 +70,7 @@ public class MainActivity extends AppCompatActivity {
                     public void onPayForget() {
                         dialog.dismiss();
                         //点击忘记密码回调
-                        showShort("忘记密码回调");
+                        showShort("忘记密码");
                     }
                 });
     }
@@ -81,9 +84,15 @@ public class MainActivity extends AppCompatActivity {
                 .setRandomNumber(true)
                 .setPayClickListener(new PayPassView.OnPayClickListener() {
                     @Override
-                    public void onPassFinish(String passContent) {
+                    public void onPassFinish(String password) {
                         //6位输入完成回调
-                        showShort("输入完成回调");
+                        new Handler().postDelayed(new Runnable() {
+                            @Override
+                            public void run() {
+                                Log.i("test","--------------ssss");
+                                showShort("输入内容:"+password);
+                            }
+                        }, 500);  //
                     }
                     @Override
                     public void onPayClose() {
@@ -94,30 +103,31 @@ public class MainActivity extends AppCompatActivity {
                     public void onPayForget() {
                         dialog.dismiss();
                         //点击忘记密码回调
-                        showShort("忘记密码回调");
+                        showShort("忘记密码");
                     }
                 });
     }
     /**
-     *  2 自定义方式
+     *  3 自定义方式
      */
     private void payDialog3() {
         final PayPassDialog dialog=new PayPassDialog(this,R.style.dialog_pay_theme);
         //弹框自定义配置
         dialog.setAlertDialog(false)
                 .setWindowSize(LinearLayout.LayoutParams.MATCH_PARENT, LinearLayout.LayoutParams.WRAP_CONTENT,0.4f)
-                .setOutColse(false)
+                .setOutColse(false) //点击外部是否消失
                 .setGravity(R.style.dialogOpenAnimation, Gravity.BOTTOM);
         //组合控件自定义配置
          dialog.getPayViewPass()
-        .setForgetText("忘记支付密码?")
+        .setHintText("自定义样式文本")
+        .setForgetText("密码忘记?")
         .setForgetColor(getResources().getColor(R.color.colorAccent))
         .setForgetSize(16)
         .setPayClickListener(new PayPassView.OnPayClickListener() {
             @Override
-            public void onPassFinish(String passContent) {
+            public void onPassFinish(String password) {
                 //6位输入完成回调
-                showShort("输入完成回调");
+                showShort("输入内容:"+password);
             }
             @Override
             public void onPayClose() {
@@ -128,7 +138,7 @@ public class MainActivity extends AppCompatActivity {
             public void onPayForget() {
                 dialog.dismiss();
                 //忘记密码回调
-                showShort("忘记密码回调");
+                showShort("忘记密码");
             }
         });
     }

@@ -6,6 +6,7 @@ import android.graphics.Bitmap;
 import android.graphics.drawable.Drawable;
 import androidx.annotation.Nullable;
 import android.util.AttributeSet;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.MotionEvent;
 import android.view.View;
@@ -42,7 +43,7 @@ public class PayPassView extends RelativeLayout {
      * 按钮对外接口
      */
     public static interface OnPayClickListener {
-        void onPassFinish(String passContent);
+        void onPassFinish(String password);
         void onPayClose();
         void onPayForget();
     }
@@ -50,7 +51,7 @@ public class PayPassView extends RelativeLayout {
     public void setPayClickListener(OnPayClickListener listener) {
         mPayClickListener = listener;
     }
-    //在代码new使用
+
     public PayPassView(Context context) {
         super(context);
     }
