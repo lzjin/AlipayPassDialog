@@ -17,7 +17,9 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
+import java.util.Random;
 
 /**
  * Created by Administrator on 2018/11/15.
@@ -34,6 +36,7 @@ public class PayPassView extends RelativeLayout {
     private TextView    mTvHint;//提示 (提示:密码错误,重新输入)
     private List<Integer> listNumber;//1,2,3---0
     private View mPassLayout;//布局
+    private boolean isRandom;
 
     /**
      * 按钮对外接口
@@ -97,14 +100,38 @@ public class PayPassView extends RelativeLayout {
         });
 
         //初始化数据
-        listNumber = new ArrayList<>();
-        for (int i = 1; i < 10; i++) {
-            listNumber.add(i);
-        }
-        listNumber.add(10);
-        listNumber.add(0);
-        listNumber.add(R.mipmap.ic_pay_del0);
+        initData();
+    }
 
+    /**
+     * isRandom是否开启随机数
+     */
+    private void initData(){
+        if(isRandom){
+            listNumber = new ArrayList<>();
+            listNumber.clear();
+            for (int i = 0; i <= 10; i++) {
+                listNumber.add(i);
+            }
+            //此方法是打乱顺序
+            Collections.shuffle(listNumber);
+            for(int i=0;i<=10;i++){
+                if(listNumber.get(i)==10){
+                    listNumber.remove(i);
+                    listNumber.add(9,10);
+                }
+            }
+            listNumber.add(R.mipmap.ic_pay_del0);
+        }else {
+            listNumber = new ArrayList<>();
+            listNumber.clear();
+            for (int i = 1; i <= 9; i++) {
+                listNumber.add(i);
+            }
+            listNumber.add(10);
+            listNumber.add(0);
+            listNumber.add(R.mipmap.ic_pay_del0);
+        }
         mGridView.setAdapter(adapter);
     }
 
@@ -204,75 +231,93 @@ public class PayPassView extends RelativeLayout {
         public TextView btnNumber;
     }
 
-
-
+    /***
+     * 设置随机数
+     * @param israndom
+     */
+     public PayPassView setRandomNumber(boolean israndom){
+        isRandom=israndom;
+        initData();
+        adapter.notifyDataSetChanged();
+        return this;
+     }
     /**
      * 关闭图片
      * 资源方式
      */
-    public void setCloseImgView(int resId) {
+    public PayPassView setCloseImgView(int resId) {
         mImageViewClose.setImageResource(resId);
+        return this;
     }
     /**
      * 关闭图片
      * Bitmap方式
      */
-    public void setCloseImgView(Bitmap bitmap) {
+    public PayPassView setCloseImgView(Bitmap bitmap) {
         mImageViewClose.setImageBitmap(bitmap);
+        return this;
     }
     /**
      * 关闭图片
      * drawable方式
      */
-    public void setCloseImgView(Drawable drawable) {
+    public PayPassView setCloseImgView(Drawable drawable) {
         mImageViewClose.setImageDrawable(drawable);
+        return this;
     }
 
 
     /**
      * 设置忘记密码文字
      */
-    public void setForgetText(String text) {
+    public PayPassView setForgetText(String text) {
         mTvForget.setText(text);
+        return this;
     }
     /**
      * 设置忘记密码文字大小
      */
-    public void setForgetSize(float textSize) {
+    public PayPassView setForgetSize(float textSize) {
         mTvForget.setTextSize(textSize);
+        return this;
     }
     /**
      * 设置忘记密码文字颜色
      */
-    public void setForgetColor(int textColor) {
+    public PayPassView setForgetColor(int textColor) {
         mTvForget.setTextColor(textColor);
+        return this;
     }
 
     /**
      * 设置提醒的文字
      */
-    public void setHintText(String text) {
+    public PayPassView setHintText(String text) {
         mTvHint.setText(text );
+        return this;
     }
     /**
      * 设置提醒的文字大小
      */
-    public void setTvHintSize(float textSize) {
+    public PayPassView setTvHintSize(float textSize) {
         mTvHint.setTextSize(textSize);
+        return this;
     }
     /**
      * 设置提醒的文字颜色
      */
-    public void setTvHintColor(int textColor) {
+    public PayPassView setTvHintColor(int textColor) {
         mTvHint.setTextColor(textColor);
+        return this;
     }
     /**
      * 清楚所有密码TextView
      */
-    public void cleanAllTv() {
+    public PayPassView cleanAllTv() {
         strPass="";
         for(int i=0;i<6;i++){
             mTvPass[i].setText("");
         }
+        return this;
     }
 }

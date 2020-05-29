@@ -28,6 +28,22 @@ public class MainActivity extends AppCompatActivity {
                 payDialog();
             }
         });
+        //点击测试
+        Button bt2=findViewById(R.id.bt_test2);
+        bt2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                payDialog2();
+            }
+        });
+        //点击测试
+        Button bt3=findViewById(R.id.bt_test3);
+        bt3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                payDialog3();
+            }
+        });
     }
 
     /**
@@ -35,7 +51,34 @@ public class MainActivity extends AppCompatActivity {
      */
     private void payDialog() {
         final PayPassDialog dialog=new PayPassDialog(this);
+                dialog.getPayViewPass()
+                .setPayClickListener(new PayPassView.OnPayClickListener() {
+                    @Override
+                    public void onPassFinish(String passContent) {
+                        //6位输入完成回调
+                        showShort("输入完成回调");
+                    }
+                    @Override
+                    public void onPayClose() {
+                        dialog.dismiss();
+                        //关闭回调
+                    }
+                    @Override
+                    public void onPayForget() {
+                        dialog.dismiss();
+                        //点击忘记密码回调
+                        showShort("忘记密码回调");
+                    }
+                });
+    }
+
+    /**
+     * 2 随机数
+     */
+    private void payDialog2() {
+        final PayPassDialog dialog=new PayPassDialog(this);
           dialog.getPayViewPass()
+                .setRandomNumber(true)
                 .setPayClickListener(new PayPassView.OnPayClickListener() {
                     @Override
                     public void onPassFinish(String passContent) {
@@ -58,7 +101,7 @@ public class MainActivity extends AppCompatActivity {
     /**
      *  2 自定义方式
      */
-    private void payDialog2() {
+    private void payDialog3() {
         final PayPassDialog dialog=new PayPassDialog(this,R.style.dialog_pay_theme);
         //弹框自定义配置
         dialog.setAlertDialog(false)
@@ -66,11 +109,11 @@ public class MainActivity extends AppCompatActivity {
                 .setOutColse(false)
                 .setGravity(R.style.dialogOpenAnimation, Gravity.BOTTOM);
         //组合控件自定义配置
-        PayPassView payView=dialog.getPayViewPass();
-        payView.setForgetText("忘记支付密码?");
-        payView.setForgetColor(getResources().getColor(R.color.colorAccent));
-        payView.setForgetSize(16);
-        payView.setPayClickListener(new PayPassView.OnPayClickListener() {
+         dialog.getPayViewPass()
+        .setForgetText("忘记支付密码?")
+        .setForgetColor(getResources().getColor(R.color.colorAccent))
+        .setForgetSize(16)
+        .setPayClickListener(new PayPassView.OnPayClickListener() {
             @Override
             public void onPassFinish(String passContent) {
                 //6位输入完成回调

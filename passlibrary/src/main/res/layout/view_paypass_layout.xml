@@ -34,7 +34,7 @@
 
             <View
                 android:layout_width="match_parent"
-                android:layout_height="1dp"
+                android:layout_height="@dimen/dp_line_top"
                 android:layout_alignParentBottom="true"
                 android:background="@color/gray_gb"/>
 
@@ -65,7 +65,7 @@
                 android:textSize="@dimen/sp_42" />
 
             <View
-                android:layout_width="1dp"
+                android:layout_width="@dimen/dp_line"
                 android:layout_height="match_parent"
                 android:background="@color/grayc4"/>
             <!--=====2=====-->
@@ -82,7 +82,7 @@
                 android:textSize="@dimen/sp_42" />
 
             <View
-                android:layout_width="1dp"
+                android:layout_width="@dimen/dp_line"
                 android:layout_height="match_parent"
                 android:background="@color/grayc4"/>
 
@@ -100,7 +100,7 @@
                 android:gravity="center"/>
 
             <View
-                android:layout_width="1dp"
+                android:layout_width="@dimen/dp_line"
                 android:layout_height="match_parent"
                 android:background="@color/grayc4"/>
             <!--=====4=======-->
@@ -117,7 +117,7 @@
                 android:gravity="center"/>
 
             <View
-                android:layout_width="1dp"
+                android:layout_width="@dimen/dp_line"
                 android:layout_height="match_parent"
                 android:background="@color/grayc4"/>
             <!--=======5==========-->
@@ -134,7 +134,7 @@
                 android:gravity="center"/>
 
             <View
-                android:layout_width="1dp"
+                android:layout_width="@dimen/dp_line"
                 android:layout_height="match_parent"
                 android:background="@color/grayc4"/>
             <!--=========6=======-->
@@ -161,7 +161,7 @@
                 android:id="@+id/tv_forget"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="忘记密码?"
+                android:text="忘记支付密码?"
                 android:textSize="@dimen/sp_14"
                 android:textColor="@color/alipay"
                 android:layout_centerVertical="true"
@@ -179,9 +179,9 @@
                 android:id="@+id/gv_pass"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="1dp"
-                android:horizontalSpacing="1dp"
-                android:verticalSpacing="1dp"
+                android:layout_marginTop="@dimen/dp_line"
+                android:horizontalSpacing="@dimen/dp_line"
+                android:verticalSpacing="@dimen/dp_line"
                 android:numColumns="3"
                 android:listSelector="@color/graye3"  />
         </RelativeLayout>
