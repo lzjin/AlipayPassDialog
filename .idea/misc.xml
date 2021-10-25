@@ -5,7 +5,19 @@
       <configuration PROFILE_NAME="Debug" CONFIG_NAME="Debug" />
     </configurations>
   </component>
-  <component name="ProjectRootManager" version="2" languageLevel="JDK_1_8" project-jdk-name="JDK" project-jdk-type="JavaSDK">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/Users/yujing/Desktop/AlipayPassDialog-master/app/src/main/res/layout/activity_main.xml" value="0.23489583333333333" />
+        <entry key="..\:/Users/yujing/Desktop/AlipayPassDialog-master/passlibrary/src/main/res/drawable/payview_btn_selector.xml" value="0.38866189989785493" />
+        <entry key="..\:/Users/yujing/Desktop/AlipayPassDialog-master/passlibrary/src/main/res/drawable/payview_stroke_gray_shape.xml" value="0.38866189989785493" />
+        <entry key="..\:/Users/yujing/Desktop/AlipayPassDialog-master/passlibrary/src/main/res/layout/view_paypass_dialog.xml" value="0.23489583333333333" />
+        <entry key="..\:/Users/yujing/Desktop/AlipayPassDialog-master/passlibrary/src/main/res/layout/view_paypass_gridview_item.xml" value="0.23489583333333333" />
+        <entry key="..\:/Users/yujing/Desktop/AlipayPassDialog-master/passlibrary/src/main/res/layout/view_paypass_layout.xml" value="0.5" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="JDK" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/build/classes" />
   </component>
   <component name="ProjectType">
