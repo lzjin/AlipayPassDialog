@@ -2,12 +2,9 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/AlipayPassDialog.iml" filepath="$PROJECT_DIR$/AlipayPassDialog.iml" group="AlipayPassDialog" />
-      <module fileurl="file://$PROJECT_DIR$/app/AlipayPassDialog-app.iml" filepath="$PROJECT_DIR$/app/AlipayPassDialog-app.iml" group="AlipayPassDialog/app" />
-      <module fileurl="file://$PROJECT_DIR$/passlibrary/AlipayPassDialog-passlibrary.iml" filepath="$PROJECT_DIR$/passlibrary/AlipayPassDialog-passlibrary.iml" group="AlipayPassDialog/passlibrary" />
-      <module fileurl="file://$PROJECT_DIR$/Project-AlipayPassDialog.iml" filepath="$PROJECT_DIR$/Project-AlipayPassDialog.iml" group="AlipayPassDialog" />
-      <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" group="AlipayPassDialog/app" />
-      <module fileurl="file://$PROJECT_DIR$/passlibrary/passlibrary.iml" filepath="$PROJECT_DIR$/passlibrary/passlibrary.iml" group="AlipayPassDialog/passlibrary" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/AlipayPassDialog.iml" filepath="$PROJECT_DIR$/.idea/modules/AlipayPassDialog.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/AlipayPassDialog.app.iml" filepath="$PROJECT_DIR$/.idea/modules/app/AlipayPassDialog.app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/passlibrary/AlipayPassDialog.passlibrary.iml" filepath="$PROJECT_DIR$/.idea/modules/passlibrary/AlipayPassDialog.passlibrary.iml" />
     </modules>
   </component>
 </project>

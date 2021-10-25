@@ -4,12 +4,12 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
     android:gravity="center"
+    android:orientation="vertical"
     tools:context="com.lzj.pass.MainActivity">
 
     <Button
-        android:id="@+id/bt_test"
+        android:id="@+id/bt_test1"
         android:layout_width="wrap_content"
         android:layout_height="50dp"
         android:text="默认密码效果"
@@ -38,4 +38,23 @@
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+    <Button
+        android:id="@+id/bt_test4"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:text="4位数密码"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/bt_test5"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:text="悬浮窗"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 </LinearLayout>

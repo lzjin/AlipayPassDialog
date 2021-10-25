@@ -14,6 +14,7 @@
 * 支持弹框样式 
 * 支持回调函数处理 
 * 支持数字位置随机
+* 支持自定义密码位数1-9位
 
 ### API方法介绍  
 * setCloseImgView(int resId) //设置关闭图标 
@@ -25,6 +26,7 @@
 * onPayClose()//关闭回调 
 * onPayForget()//忘记密码回调 
 * setRandomNumber(true) //数字随机
+* setPassWordLength(int) //自定义密码位数1-9位
 
 ### Usage Jitpack 
 ---
